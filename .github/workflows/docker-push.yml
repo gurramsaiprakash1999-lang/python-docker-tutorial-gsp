@@ -16,5 +16,7 @@ jobs:
           - name: Build and push
             uses: docker/build-push-action@v4
             with:
+              context: ./example2
+              file: ./example2/Dockerfile
               push: true
               tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-first-app:latest
